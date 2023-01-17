@@ -35,4 +35,4 @@ STATUSNGROK=$(curl -s http://127.0.0.1:4040/api/tunnels | jq '.tunnels | .[] | "
 echo -e "To stop service NGROK:\n ./ngrok service stop"
 echo -e "To setting configuration:\n ngrok.yml"
 echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
-echo -e "service online:\n" $STATUSNGROK
+echo -e "service online NGROK:\n" $STATUSNGROK
