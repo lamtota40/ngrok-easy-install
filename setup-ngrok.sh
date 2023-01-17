@@ -26,6 +26,7 @@ chmod +x ngrok
 clear
 echo "Running ngrok for $ARCH . . ."
 ./ngrok service install --config=ngrok.yml
+sleep 3
 ./ngrok service start
 echo "Wait 20s…"
 sleep 20
