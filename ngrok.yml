@@ -6,4 +6,4 @@ tunnels:
     proto: tcp
   VNC:
     addr: 5900
-    proto: http
+    proto: tcp
