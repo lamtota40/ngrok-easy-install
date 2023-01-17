@@ -23,9 +23,9 @@ wget https://raw.githubusercontent.com/lamtota40/tes/main/ngrok.yml
 wget $DOWNLOAD_URL
 unzip $ARCHIVE
 chmod +x ngrok
-./ngrok service install --config=ngrok.yml
 clear
 echo "Running ngrok for $ARCH . . ."
+./ngrok service install --config=ngrok.yml
 ./ngrok service start
 echo "Wait 20s…"
 sleep 20
