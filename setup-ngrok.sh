@@ -27,4 +27,4 @@ unzip $ARCHIVE
 chmod +x ngrok
 ./ngrok service install --config=ngrok.yml
 ./ngrok service start
-echo -e "Finish… to check status runing NGROK visit \n http://127.0.01:4040"
+echo -e "Finish… to check status NGROK visit \n http://127.0.01:4040"
