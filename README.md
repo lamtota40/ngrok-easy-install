@@ -1,6 +1,5 @@
 # ngrok-easy-install
-easy instalation for ngrok
-Ngrok v3
+easy instalation for Ngrok v3
 
 # instalation
 ```console
