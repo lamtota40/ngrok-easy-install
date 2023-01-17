@@ -1,5 +1,5 @@
 version: "2"
-authtoken: 2J8ncHzvzHMtpRJxcItVPbbMSHZ_3Yuo4YWkd1LegZaRv7wtU
+authtoken: 
 tunnels:
   SSH:
     addr: 22
