@@ -18,7 +18,7 @@ fi
 ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
-sudo apt install wget unzip -y
+sudo apt install wget unzip jq -y
 wget https://raw.githubusercontent.com/lamtota40/tes/main/ngrok.yml
 clear
 echo "Downloading ngrok for $ARCH . . ."
