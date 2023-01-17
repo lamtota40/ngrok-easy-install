@@ -19,6 +19,7 @@ ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 sudo apt install wget unzip -y
+clear
 echo "Downloading ngrok for $ARCH . . ."
 wget $DOWNLOAD_URL
 unzip $ARCHIVE
