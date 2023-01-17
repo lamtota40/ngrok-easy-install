@@ -28,3 +28,4 @@ chmod +x ngrok
 ./ngrok service install --config=ngrok.yml
 ./ngrok service start
 echo -e "Finish… to check status NGROK visit \n http://127.0.01:4040"
+curl -s http://127.0.0.1:4040/api/tunnels | jq '.tunnels | .[] | "\(.name) \(.public_url)"'
