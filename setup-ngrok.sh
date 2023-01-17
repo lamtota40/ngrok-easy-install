@@ -20,12 +20,13 @@ DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 sudo apt install wget unzip jq -y
 wget https://raw.githubusercontent.com/lamtota40/tes/main/ngrok.yml
-clear
-echo "Downloading ngrok for $ARCH . . ."
 wget $DOWNLOAD_URL
+clear
+echo "Finish Downloading ngrok for $ARCH . . ."
 unzip $ARCHIVE
 chmod +x ngrok
 ./ngrok service install --config=ngrok.yml
 ./ngrok service start
-echo -e "Finish… to check status NGROK visit \n http://127.0.01:4040"
-curl -s http://127.0.0.1:4040/api/tunnels | jq '.tunnels | .[] | "\(.name) \(.public_url)"'
+echo -e "END… to check status NGROK visit \n http://127.0.01:4040"
+STATNGROK=curl -s http://127.0.0.1:4040/api/tunnels | jq '.tunnels | .[] | "\(.name) \(.public_url)"'
+echo $STATNGROK
