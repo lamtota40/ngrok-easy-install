@@ -3,6 +3,6 @@ easy instalation for ngrok
 Ngrok v3
 
 # instalation
-
-
-# instalation
+```console
+curl -sLkO https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/setup-ngrok.sh ; bash setup-ngrok.sh
+```
