@@ -23,7 +23,7 @@ sudo apt-get install wget unzip jq -y
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
 wget $DOWNLOAD_URL
 unzip $ARCHIVE
-chmod +x ngrok
+sudo chmod +x ngrok
 clear
 echo "Running ngrok for $ARCH . . ."
 ./ngrok service install --config=ngrok.yml
