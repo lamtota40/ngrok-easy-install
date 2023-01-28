@@ -5,5 +5,5 @@ tunnels:
     addr: 22
     proto: tcp
   WEB:
-    addr: 80
-    proto: http
+    addr: 5900
+    proto: tcp
