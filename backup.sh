@@ -19,7 +19,6 @@ ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 sudo apt-get update
-sudo apt-get install openssh-server -y
 sudo apt-get install jq -y
 sudo apt-get install unzip jq -y
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
