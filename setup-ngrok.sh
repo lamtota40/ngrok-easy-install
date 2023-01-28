@@ -20,6 +20,7 @@ DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/lib/dpkg/lock
+sudo rm /var/cache/apt/archives/lock
 sudo dpkg --configure -a
 sudo apt update
 sudo apt-get install openssh-server -y
