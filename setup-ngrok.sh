@@ -25,7 +25,7 @@ sudo dpkg --configure -a
 sudo apt update
 sudo apt-get install openssh-server -y
 sudo apt-get install jq -y
-sudo apt-get install curl -y
+#sudo apt-get install curl -y
 sudo apt-get install unzip jq -y
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
 wget $DOWNLOAD_URL
@@ -47,5 +47,5 @@ echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
 #    exit 1
 #fi
 
-STATUSNGROK=$(curl -s http://127.0.0.1:4040/api/tunnels | jq '.tunnels | .[] | "\(.name) \(.public_url)"')
+STATUSNGROK=$(wget -q http://127.0.0.1:4040/api/tunnels | jq '.tunnels | .[] | "\(.name) \(.public_url)"')
 echo -e "service online NGROK:\n" $STATUSNGROK
