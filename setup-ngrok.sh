@@ -36,14 +36,3 @@ echo -e "To stop service NGROK:\n ./ngrok service stop"
 echo -e "To setting configuration:\n ngrok.yml"
 echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
 echo -e "service online NGROK:\n" $STATUSNGROK
-
-
-if (( $EUID != 0 )); then
-    echo "Please run as root"
-    exit 1
-fi
-
-systemctl stop ngrok.service
-systemctl disable ngrok.service
-rm /lib/systemd/system/ngrok.service
-rm -rf /opt/ngrok
