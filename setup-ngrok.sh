@@ -31,7 +31,7 @@ if [ -f "$lock1" ];then
 
 if [ -z $(lsof -t $lock1) ]
 then
-      echo "Ok... PID ($lock1) Not found"
+      echo "Ok... Dir ($lock1) already delete"
 else
       sudo kill -9 $(lsof -t $lock1)
       echo "Found..PID ($lock1) already kill"
@@ -44,7 +44,7 @@ if [ -f "$lock2" ];then
 
 if [ -z $(lsof -t $lock2) ]
 then
-      echo "Ok... PID ($lock2) Not found"
+      echo "Ok... Dir ($lock2) already delete"
 else
       sudo kill -9 $(lsof -t $lock2)
       echo "Found..PID ($lock2) already kill"
@@ -57,7 +57,7 @@ if [ -f "$lock3" ];then
 
 if [ -z $(lsof -t $lock3) ]
 then
-      echo "Ok... PID ($lock3) Not found"
+      echo "Ok... Dir ($lock3) already delete"
 else
       sudo kill -9 $(lsof -t $lock3)
       echo "Found..PID ($lock3) already kill"
