@@ -66,6 +66,7 @@ fi
 sudo rm -rf $lock3
 fi
 sudo dpkg --configure -a
+#sudo apt-get install --reinstall libappstream4
 sudo apt update
 
 exit 1
