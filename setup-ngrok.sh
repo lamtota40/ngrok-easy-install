@@ -71,8 +71,7 @@ sudo apt update
 
 sudo apt-get install openssh-server -y
 sudo apt-get install jq -y
-#sudo apt-get install curl -y
-sudo apt-get install unzip jq -y
+sudo apt-get install unzip -y
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
 wget $DOWNLOAD_URL
 unzip $ARCHIVE
