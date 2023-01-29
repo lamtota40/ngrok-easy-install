@@ -26,6 +26,9 @@ lock1=/var/lib/dpkg/lock-frontend
 lock2=/var/lib/dpkg/lock
 lock3=/var/cache/apt/archives/lock
 
+
+if [ -f "$lock1" ];then
+
 if [ -z $(lsof -t $lock1) ]
 then
       echo "Ok... PID ($lock1) Not found"
@@ -33,7 +36,11 @@ else
       sudo kill -9 $(lsof -t $lock1)
       echo "Found..PID ($lock1) already kill"
 fi
+
 sudo rm -rf $lock1
+fi
+###
+if [ -f "$lock2" ];then
 
 if [ -z $(lsof -t $lock2) ]
 then
@@ -42,7 +49,11 @@ else
       sudo kill -9 $(lsof -t $lock2)
       echo "Found..PID ($lock2) already kill"
 fi
+
 sudo rm -rf $lock2
+fi
+###
+if [ -f "$lock3" ];then
 
 if [ -z $(lsof -t $lock3) ]
 then
@@ -51,7 +62,9 @@ else
       sudo kill -9 $(lsof -t $lock3)
       echo "Found..PID ($lock3) already kill"
 fi
+
 sudo rm -rf $lock3
+fi
 
 sudo apt update
 sudo dpkg --configure -a
