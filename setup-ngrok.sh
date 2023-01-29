@@ -26,9 +26,16 @@ lock1=/var/lib/dpkg/lock-frontend
 lock2=/var/lib/dpkg/lock
 lock3=/var/cache/apt/archives/lock
 
-sudo kill -9 $(lsof -t $lock1) | rm $lock1
-sudo kill -9 $(lsof -t $lock2) | rm $lock2
-sudo kill -9 $(lsof -t $lock3) | rm $lock3
+if [ -z $(lsof -t $lock1) ]
+then
+      sudo rm $lock1
+      echo "Ok... PID (lock-frontend) Not found"
+else
+      sudo kill -9 $(lsof -t $lock1)
+      sudo rm $lock1
+      echo "Found..PID (lock-frontend) already kill"
+fi
+
 sudo dpkg --configure -a
 sudo apt update
 exit 1
