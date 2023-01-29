@@ -28,33 +28,30 @@ lock3=/var/cache/apt/archives/lock
 
 if [ -z $(lsof -t $lock1) ]
 then
-      sudo rm $lock1
       echo "Ok... PID ($lock1) Not found"
 else
       sudo kill -9 $(lsof -t $lock1)
-      sudo rm $lock1
       echo "Found..PID ($lock1) already kill"
 fi
+sudo rm -rf $lock1
 
 if [ -z $(lsof -t $lock2) ]
 then
-      sudo rm $lock2
       echo "Ok... PID ($lock2) Not found"
 else
       sudo kill -9 $(lsof -t $lock2)
-      sudo rm $lock2
       echo "Found..PID ($lock2) already kill"
 fi
+sudo rm -rf $lock2
 
 if [ -z $(lsof -t $lock3) ]
 then
-      sudo rm $lock3
       echo "Ok... PID ($lock3) Not found"
 else
       sudo kill -9 $(lsof -t $lock3)
-      sudo rm $lock3
       echo "Found..PID ($lock3) already kill"
 fi
+sudo rm -rf $lock3
 
 sudo apt update
 sudo dpkg --configure -a
