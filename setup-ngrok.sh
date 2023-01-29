@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # determine system arch
+#sudo apt install ufw
+#sudo ufw status
 #https://dl.equinox.io/ngrok/ngrok-v3/stable
 
 ARCH=
