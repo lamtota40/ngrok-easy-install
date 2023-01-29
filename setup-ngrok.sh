@@ -65,9 +65,8 @@ fi
 
 sudo rm -rf $lock3
 fi
-
-sudo apt update
 sudo dpkg --configure -a
+sudo apt update
 
 exit 1
 
