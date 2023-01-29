@@ -26,7 +26,6 @@ lock1=/var/lib/dpkg/lock-frontend
 lock2=/var/lib/dpkg/lock
 lock3=/var/cache/apt/archives/lock
 
-
 if [ -f "$lock1" ];then
 
 if [ -z $(lsof -t $lock1) ]
@@ -39,7 +38,7 @@ fi
 
 sudo rm -rf $lock1
 fi
-###
+##############################
 if [ -f "$lock2" ];then
 
 if [ -z $(lsof -t $lock2) ]
@@ -52,7 +51,7 @@ fi
 
 sudo rm -rf $lock2
 fi
-###
+##############################
 if [ -f "$lock3" ];then
 
 if [ -z $(lsof -t $lock3) ]
