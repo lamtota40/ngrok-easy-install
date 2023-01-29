@@ -3,6 +3,7 @@
 # determine system arch
 #sudo apt install ufw
 #sudo ufw status
+#ufw status verbose
 #https://dl.equinox.io/ngrok/ngrok-v3/stable
 
 ARCH=
