@@ -22,13 +22,17 @@ fi
 
 ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
+lock1=/var/lib/dpkg/lock-frontend
+lock2=/var/lib/dpkg/lock
+lock3=/var/cache/apt/archives/lock
 
-#lsof -t 
-sudo rm /var/lib/dpkg/lock-frontend
-sudo rm /var/lib/dpkg/lock
-sudo rm /var/cache/apt/archives/lock
+sudo kill -9 $(lsof -t $lock1) | rm $lock1
+sudo kill -9 $(lsof -t $lock2) | rm $lock2
+sudo kill -9 $(lsof -t $lock3) | rm $lock3
 sudo dpkg --configure -a
 sudo apt update
+exit 1
+
 sudo apt-get install openssh-server -y
 sudo apt-get install jq -y
 #sudo apt-get install curl -y
