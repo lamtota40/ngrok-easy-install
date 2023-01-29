@@ -56,8 +56,9 @@ else
       echo "Found..PID ($lock3) already kill"
 fi
 
-sudo dpkg --configure -a
 sudo apt update
+sudo dpkg --configure -a
+
 exit 1
 
 sudo apt-get install openssh-server -y
