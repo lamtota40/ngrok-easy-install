@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # determine system arch
+#https://dl.equinox.io/ngrok/ngrok-v3/stable
+
 ARCH=
 if [ "$(uname -m)" == 'x86_64' ]
 then
