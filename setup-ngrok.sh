@@ -93,5 +93,5 @@ echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
 #    exit 1
 #fi
 
-STATUSNGROK=$(wget -q http://127.0.0.1:4040/api/tunnels | jq '.tunnels | .[] | "\(.name) \(.public_url)"')
+STATUSNGROK=$(wget http://127.0.0.1:4040/api/tunnels -q -O - | jq '.tunnels | .[] | "\(.name) \(.public_url)"')
 echo -e "service online NGROK:\n" $STATUSNGROK
