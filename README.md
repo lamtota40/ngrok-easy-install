@@ -13,5 +13,6 @@ sudo apt-get install git -y
 ```console
 mkdir -p /opt/ngrok
 ```
+```console
 git clone https://github.com/lamtota40/ngrok-easy-install.git /opt/ngrok
 ```
