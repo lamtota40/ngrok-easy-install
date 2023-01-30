@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    echo "You can Try comand 'sudo -i'"
+    exit 1
+fi
+
 #sudo apt install ufw
 #sudo ufw status
 #ufw status verbose
