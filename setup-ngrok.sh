@@ -61,7 +61,7 @@ fi
 
 sudo apt-get install --reinstall libappstream4
 sudo dpkg --configure -a
-sudo apt update
+sudo apt-get update
 
 sudo apt-get install openssh-server -y
 sudo apt-get install jq -y
