@@ -93,6 +93,7 @@ echo -e "To setting configuration:\n sudo nano ngrok.yml"
 echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
 
 if [ ! $(which jq) ]; then
+    echo -e "service online NGROK:\n"
     wget http://127.0.0.1:4040/api/tunnels -q -O -
 else
     STATUSNGROK=$(wget http://127.0.0.1:4040/api/tunnels -q -O - | jq '.tunnels | .[] | "\(.name) \(.public_url)"')
