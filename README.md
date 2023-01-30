@@ -4,7 +4,7 @@ easy instalation for Ngrok v3 stable
 # instalation
 https://dashboard.ngrok.com/get-started/your-authtoken
 ```console
-wget -qO- bit.do/sngrok | bash
+wget -qO- n9.cl/sngrok | bash
 ```
 if use git clone
 ```console
