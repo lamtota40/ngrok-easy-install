@@ -33,6 +33,7 @@ wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.y
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service
 wget $DOWNLOAD_URL
 unzip $ARCHIVE
+rm $ARCHIVE
 sudo chmod +x ngrok
 clear
 echo "Running ngrok for $(uname -m) . . ."
