@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# determine system arch
 #sudo apt install ufw
 #sudo ufw status
 #ufw status verbose
-#https://dl.equinox.io/ngrok/ngrok-v3/stable
 
+#for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable
+# determine system arch
 ARCH=
 if [ "$(uname -m)" == 'x86_64' ]
 then
