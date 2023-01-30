@@ -21,8 +21,5 @@ bash /opt/ngrok/setup-ngrok.sh
 ```
 <img src="https://user-images.githubusercontent.com/26719371/215472523-183ef332-3c92-491d-bac3-ae0b66a5c130.jpg" width="150">
 
-if you want custom domain $10/month
-https://ngrok.com/pricing
-
-alternative NGROK cheap
-https://burrow.io/ only $5/month
+for alternative NGROK
+https://www.softwaretestinghelp.com/ngrok-alternatives/
