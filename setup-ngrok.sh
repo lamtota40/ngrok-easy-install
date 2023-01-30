@@ -61,7 +61,7 @@ sudo rm $lock4
 fi
 
 sudo dpkg --configure -a
-sudo apt-get install --reinstall libappstream4
+sudo apt-get install --reinstall libappstream4 -y
 sudo apt-get install -f
 sudo apt-get update
 
