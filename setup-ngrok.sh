@@ -6,10 +6,6 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-#sudo apt install ufw
-#sudo ufw status
-#ufw status verbose
-
 #for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable/archive
 # determine system arch
 ARCH=
@@ -28,48 +24,7 @@ fi
 
 ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
-lock1=/var/lib/dpkg/lock-frontend
-lock2=/var/lib/dpkg/lock
-lock3=/var/cache/apt/archives/lock
 
-if [ -f "$lock1" ];then
-if [ -z $(lsof -t $lock1) ]
-then
-      echo "Ok... file ($lock1) already delete"
-else
-      sudo kill -9 $(lsof -t $lock1)
-      echo "Found..PID ($lock1) already kill & delete file"
-fi
-sudo rm -rf $lock1
-fi
-##############################
-if [ -f "$lock2" ];then
-if [ -z $(lsof -t $lock2) ]
-then
-      echo "Ok... file ($lock2) already delete"
-else
-      sudo kill -9 $(lsof -t $lock2)
-      echo "Found..PID ($lock2) already kill & delete file"
-fi
-sudo rm -rf $lock2
-fi
-##############################
-if [ -f "$lock3" ];then
-if [ -z $(lsof -t $lock3) ]
-then
-      echo "Ok... file ($lock3) already delete"
-else
-      sudo kill -9 $(lsof -t $lock3)
-      echo "Found..PID ($lock3) already kill & delete file"
-fi
-sudo rm -rf $lock3
-fi
-
-sudo apt-get install --reinstall libappstream4
-sudo dpkg --configure -a
-sudo apt-get update
-
-sudo apt-get install openssh-server -y
 sudo apt-get install jq -y
 sudo apt-get install unzip -y
 mkdir -p /opt/ngrok
@@ -102,3 +57,5 @@ else
     echo -e "service online NGROK:\n" $STATUSNGROK
 fi
 cd
+
+#End script
