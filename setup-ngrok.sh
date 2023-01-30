@@ -18,7 +18,7 @@ else
       sudo kill -9 $(lsof -t $lock1)
       echo "Found..PID ($lock1) already kill & delete file"
 fi
-sudo rm -rf $lock1
+sudo rm $lock1
 fi
 ##############################
 if [ -f "$lock2" ];then
@@ -29,7 +29,7 @@ else
       sudo kill -9 $(lsof -t $lock2)
       echo "Found..PID ($lock2) already kill & delete file"
 fi
-sudo rm -rf $lock2
+sudo rm $lock2
 fi
 ##############################
 if [ -f "$lock3" ];then
@@ -40,7 +40,7 @@ else
       sudo kill -9 $(lsof -t $lock3)
       echo "Found..PID ($lock3) already kill & delete file"
 fi
-sudo rm -rf $lock3
+sudo rm $lock3
 fi
 
 sudo apt-get install --reinstall libappstream4
