@@ -43,9 +43,8 @@ fi
 sudo rm $lock3
 fi
 
-sudo apt-get install --reinstall libappstream4
-
 sudo dpkg --configure -a
+sudo apt-get install --reinstall libappstream4
 sudo apt-get install -f
 sudo apt-get update
 
