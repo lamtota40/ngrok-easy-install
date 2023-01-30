@@ -83,14 +83,14 @@ clear
 echo "Running ngrok for $(uname -m) . . ."
 ./ngrok service install --config=ngrok.yml
 sleep 3
-#systemctl enable ngrok.service
-#systemctl start ngrok.service
-./ngrok service start
+systemctl enable ngrok.service
+systemctl start ngrok.service
+#./ngrok service start
 echo "Wait 10s…"
 sleep 10
 echo -e "Finish… to check status NGROK: \n http://127.0.01:4040"
 echo "First enter comand 'cd /opt/ngrok'"
-echo -e "To stop service NGROK:\n ./ngrok service stop"
+echo -e "To stop service NGROK:\n systemctl stop ngrok.service"
 echo -e "To setting configuration:\n sudo nano ngrok.yml"
 echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
 
