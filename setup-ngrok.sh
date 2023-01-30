@@ -38,7 +38,6 @@ sudo chmod +x ngrok
 clear
 echo "Running ngrok for ARCH $(uname -m) . . ."
 #./ngrok service install --config=ngrok.yml
-sleep 3
 systemctl enable ngrok.service
 systemctl start ngrok.service
 #./ngrok service start
