@@ -32,7 +32,7 @@ then
       echo "Ok... file ($lock1) already delete"
 else
       sudo kill -9 $(lsof -t $lock1)
-      echo "Found..PID ($lock1) already kill & delete"
+      echo "Found..PID ($lock1) already kill & delete file"
 fi
 sudo rm -rf $lock1
 fi
@@ -43,7 +43,7 @@ then
       echo "Ok... file ($lock2) already delete"
 else
       sudo kill -9 $(lsof -t $lock2)
-      echo "Found..PID ($lock2) already kill & delete"
+      echo "Found..PID ($lock2) already kill & delete file"
 fi
 sudo rm -rf $lock2
 fi
@@ -54,7 +54,7 @@ then
       echo "Ok... file ($lock3) already delete"
 else
       sudo kill -9 $(lsof -t $lock3)
-      echo "Found..PID ($lock3) already kill & delete"
+      echo "Found..PID ($lock3) already kill & delete file"
 fi
 sudo rm -rf $lock3
 fi
