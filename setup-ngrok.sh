@@ -27,7 +27,6 @@ lock2=/var/lib/dpkg/lock
 lock3=/var/cache/apt/archives/lock
 
 if [ -f "$lock1" ];then
-
 if [ -z $(lsof -t $lock1) ]
 then
       echo "Ok... file ($lock1) already delete"
@@ -35,12 +34,10 @@ else
       sudo kill -9 $(lsof -t $lock1)
       echo "Found..PID ($lock1) already kill & delete"
 fi
-
 sudo rm -rf $lock1
 fi
 ##############################
 if [ -f "$lock2" ];then
-
 if [ -z $(lsof -t $lock2) ]
 then
       echo "Ok... file ($lock2) already delete"
@@ -48,12 +45,10 @@ else
       sudo kill -9 $(lsof -t $lock2)
       echo "Found..PID ($lock2) already kill & delete"
 fi
-
 sudo rm -rf $lock2
 fi
 ##############################
 if [ -f "$lock3" ];then
-
 if [ -z $(lsof -t $lock3) ]
 then
       echo "Ok... file ($lock3) already delete"
@@ -61,7 +56,6 @@ else
       sudo kill -9 $(lsof -t $lock3)
       echo "Found..PID ($lock3) already kill & delete"
 fi
-
 sudo rm -rf $lock3
 fi
 
