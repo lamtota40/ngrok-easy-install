@@ -33,8 +33,8 @@ sudo apt-get install jq -y
 mkdir -p /opt/ngrok
 cd /opt/ngrok
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
-wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service
-cp ngrok.service /lib/systemd/system/
+wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service -P /lib/systemd/system/
+#cp ngrok.service /lib/systemd/system/
 wget $DOWNLOAD_URL
 tar xvf $ARCHIVE
 rm $ARCHIVE
