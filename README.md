@@ -24,5 +24,5 @@ bash /opt/ngrok/setup-ngrok.sh
 if you want custom domain $10/month
 https://ngrok.com/pricing
 
-alternative cheap
+alternative NGROK cheap
 https://burrow.io/ only $5/month
