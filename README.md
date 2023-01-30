@@ -16,3 +16,6 @@ mkdir -p /opt/ngrok
 ```console
 git clone https://github.com/lamtota40/ngrok-easy-install.git /opt/ngrok
 ```
+```console
+bash /opt/ngrok/setup-ngrok.sh
+```
