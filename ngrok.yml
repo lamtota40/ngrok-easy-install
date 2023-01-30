@@ -5,6 +5,6 @@ tunnels:
   SSH:
     addr: 22
     proto: tcp
-  WEB:
-    addr: 5900
+  VNC:
+    addr: 5901
     proto: tcp
