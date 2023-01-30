@@ -6,9 +6,12 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-lock1=/var/lib/dpkg/lock-frontend
-lock2=/var/lib/dpkg/lock
-lock3=/var/cache/apt/archives/lock
+#ps -A | grep apt
+#kill -9
+lock1=/var/lib/apt/lists/lock
+lock2=/var/lib/dpkg/lock-frontend
+lock3=/var/lib/dpkg/lock
+lock4=/var/cache/apt/archives/lock
 
 if [ -f "$lock1" ];then
 if [ -z $(lsof -t $lock1) ]
@@ -41,6 +44,17 @@ else
       echo "Found..PID ($lock3) already kill & delete file"
 fi
 sudo rm $lock3
+fi
+##############################
+if [ -f "$lock4" ];then
+if [ -z $(lsof -t $lock4) ]
+then
+      echo "Ok... file ($lock4) already delete"
+else
+      sudo kill -9 $(lsof -t $lock4)
+      echo "Found..PID ($lock4) already kill & delete file"
+fi
+sudo rm $lock4
 fi
 
 sudo dpkg --configure -a
