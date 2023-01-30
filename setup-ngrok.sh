@@ -77,8 +77,8 @@ echo "Running ngrok for $ARCH . . ."
 ./ngrok service install --config=ngrok.yml
 sleep 3
 ./ngrok service start
-echo "Wait 15s…"
-sleep 15
+echo "Wait 10s…"
+sleep 10
 echo -e "Finish… to check status NGROK: \n http://127.0.01:4040"
 echo "First enter comand 'cd /opt/ngrok'"
 echo -e "To stop service NGROK:\n ./ngrok service stop"
