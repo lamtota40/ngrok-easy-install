@@ -6,6 +6,9 @@ if (( $EUID != 0 )); then
     echo "After you change to root Enter comand 'bash setup-ngrok.sh' "
     exit 1
 fi
+if [ ! $(which wget) ]; then
+    sudo apt-get install wget -y
+fi
 
 #for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable/archive
 # determine system arch
