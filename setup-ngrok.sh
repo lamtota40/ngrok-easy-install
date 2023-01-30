@@ -83,6 +83,8 @@ clear
 echo "Running ngrok for $ARCH . . ."
 ./ngrok service install --config=ngrok.yml
 sleep 3
+#systemctl enable ngrok.service
+#systemctl start ngrok.service
 ./ngrok service start
 echo "Wait 10s…"
 sleep 10
