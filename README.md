@@ -1,5 +1,5 @@
 # ngrok-easy-install
-easy instalation for Ngrok v3
+easy instalation for Ngrok v3 stable
 
 # instalation
 https://dashboard.ngrok.com/get-started/your-authtoken
