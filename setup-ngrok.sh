@@ -22,17 +22,16 @@ else
     ARCH=arm
 fi
 
-ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
+ARCHIVE=ngrok-v3-stable-linux-$ARCH.tgz
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 sudo apt-get install jq -y
-sudo apt-get install unzip -y
 mkdir -p /opt/ngrok
 cd /opt/ngrok
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service
 wget $DOWNLOAD_URL
-unzip $ARCHIVE
+tar xvf $ARCHIVE
 rm $ARCHIVE
 sudo chmod +x ngrok
 clear
