@@ -8,9 +8,7 @@ fi
 
 #ps -A | grep apt
 #ps aux | grep apt
-#pkill regexp
-#pkill -f regexp
-#kill -9
+#sudo kill -9
 lock1=/var/lib/apt/lists/lock
 lock2=/var/lib/dpkg/lock-frontend
 lock3=/var/lib/dpkg/lock
