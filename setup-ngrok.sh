@@ -5,13 +5,6 @@ if (( $EUID != 0 )); then
     echo "You can Try comand 'su root' or 'sudo -i'"
     exit 1
 fi
-if [ ! $(which wget) ]; then
-    sudo apt-get install wget -y
-fi
-
-if [ ! $(which jq) ]; then
-    sudo apt-get install jq -y
-fi
 
 lock1=/var/lib/dpkg/lock-frontend
 lock2=/var/lib/dpkg/lock
@@ -56,6 +49,13 @@ sudo apt-get update
 
 sudo apt-get install openssh-server -y
 
+if [ ! $(which wget) ]; then
+    sudo apt-get install wget -y
+fi
+
+if [ ! $(which jq) ]; then
+    sudo apt-get install jq -y
+fi
 #for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable/archive
 # determine system arch
 ARCH=
