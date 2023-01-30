@@ -8,7 +8,7 @@ wget -qO- bit.do/sngrok | bash
 ```
 if use git clone
 ```console
-sudo apt-get install git -y
+apt-get install git -y
 ```
 ```console
 mkdir -p /opt/ngrok
