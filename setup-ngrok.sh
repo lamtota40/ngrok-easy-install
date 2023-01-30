@@ -4,7 +4,7 @@
 #sudo ufw status
 #ufw status verbose
 
-#for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable
+#for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable/archive
 # determine system arch
 ARCH=
 if [ "$(uname -m)" == 'x86_64' ]
