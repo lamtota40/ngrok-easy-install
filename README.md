@@ -19,4 +19,4 @@ git clone https://github.com/lamtota40/ngrok-easy-install.git /opt/ngrok
 ```console
 bash /opt/ngrok/setup-ngrok.sh
 ```
-![IMG_20230130_153517](https://user-images.githubusercontent.com/26719371/215472523-183ef332-3c92-491d-bac3-ae0b66a5c130.jpg)
+<img src="https://user-images.githubusercontent.com/26719371/215472523-183ef332-3c92-491d-bac3-ae0b66a5c130.jpg" width="200">
