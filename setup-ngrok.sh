@@ -10,6 +10,10 @@ if [ ! $(which wget) ]; then
     sudo apt-get install wget -y
 fi
 
+if [ ! $(which jq) ]; then
+    sudo apt-get install jq -y
+fi
+
 #for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable/archive
 # determine system arch
 ARCH=
