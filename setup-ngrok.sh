@@ -80,7 +80,7 @@ wget $DOWNLOAD_URL
 unzip $ARCHIVE
 sudo chmod +x ngrok
 clear
-echo "Running ngrok for $ARCH . . ."
+echo "Running ngrok for $(uname -m) . . ."
 ./ngrok service install --config=ngrok.yml
 sleep 3
 #systemctl enable ngrok.service
