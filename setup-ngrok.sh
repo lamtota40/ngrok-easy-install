@@ -96,9 +96,9 @@ DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 mkdir -p /opt/ngrok
 cd /opt/ngrok
-wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
-sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service -P /lib/systemd/system/
-wget $DOWNLOAD_URL
+wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml --no-check-certificate
+sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service --no-check-certificate -P /lib/systemd/system/
+wget $DOWNLOAD_URL --no-check-certificate
 tar xvf $ARCHIVE
 rm $ARCHIVE
 sudo chmod +x ngrok
