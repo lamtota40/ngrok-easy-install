@@ -20,8 +20,6 @@ else
 fi
 sudo rm -rf $lock1
 fi
-echo "wait 1"
-sleep 10
 ##############################
 if [ -f "$lock2" ];then
 if [ -z $(lsof -t $lock2) ]
@@ -33,8 +31,6 @@ else
 fi
 sudo rm -rf $lock2
 fi
-echo "wait 2"
-sleep 10
 ##############################
 if [ -f "$lock3" ];then
 if [ -z $(lsof -t $lock3) ]
@@ -46,15 +42,13 @@ else
 fi
 sudo rm -rf $lock3
 fi
-echo "wait 3"
-sleep 10
+
 sudo apt-get install --reinstall libappstream4
-echo "wait 4"
-sleep 10
+
 sudo dpkg --configure -a
+sudo apt-get install -f
 sudo apt-get update
-echo "wait 5"
-sleep 10
+
 sudo apt-get install openssh-server -y
 
 if [ ! $(which wget) ]; then
@@ -64,8 +58,7 @@ fi
 if [ ! $(which jq) ]; then
     sudo apt-get install jq -y
 fi
-echo "wait 6"
-sleep 10
+
 #for download manual https://dl.equinox.io/ngrok/ngrok-v3/stable/archive
 # determine system arch
 ARCH=
@@ -85,21 +78,11 @@ fi
 ARCHIVE=ngrok-v3-stable-linux-$ARCH.tgz
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
-sudo apt-get install jq -y
-echo "wait 7"
-sleep 10
 mkdir -p /opt/ngrok
 cd /opt/ngrok
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml
-echo "wait 8"
-sleep 10
 sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service -P /lib/systemd/system/
-#cp ngrok.service /lib/systemd/system/
-echo "wait 9"
-sleep 10
 wget $DOWNLOAD_URL
-echo "wait 10"
-sleep 10
 tar xvf $ARCHIVE
 rm $ARCHIVE
 sudo chmod +x ngrok
@@ -109,7 +92,7 @@ echo "Running ngrok for ARCH $(uname -m) . . ."
 systemctl enable ngrok.service
 systemctl start ngrok.service
 #./ngrok service start
-echo "Wait 11…"
+echo "Wait 10s…"
 sleep 10
 echo -e "Finish… to check status NGROK: \n http://127.0.01:4040"
 echo "First enter comand 'cd /opt/ngrok'"
