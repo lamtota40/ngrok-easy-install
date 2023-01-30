@@ -6,49 +6,6 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-lock1=/var/lib/dpkg/lock-frontend
-lock2=/var/lib/dpkg/lock
-lock3=/var/cache/apt/archives/lock
-
-if [ -f "$lock1" ];then
-if [ -z $(lsof -t $lock1) ]
-then
-      echo "Ok... file ($lock1) already delete"
-else
-      sudo kill -9 $(lsof -t $lock1)
-      echo "Found..PID ($lock1) already kill & delete file"
-fi
-sudo rm -rf $lock1
-fi
-##############################
-if [ -f "$lock2" ];then
-if [ -z $(lsof -t $lock2) ]
-then
-      echo "Ok... file ($lock2) already delete"
-else
-      sudo kill -9 $(lsof -t $lock2)
-      echo "Found..PID ($lock2) already kill & delete file"
-fi
-sudo rm -rf $lock2
-fi
-##############################
-if [ -f "$lock3" ];then
-if [ -z $(lsof -t $lock3) ]
-then
-      echo "Ok... file ($lock3) already delete"
-else
-      sudo kill -9 $(lsof -t $lock3)
-      echo "Found..PID ($lock3) already kill & delete file"
-fi
-sudo rm -rf $lock3
-fi
-
-sudo apt-get install --reinstall libappstream4
-sudo dpkg --configure -a
-sudo apt-get update
-
-sudo apt-get install openssh-server -y
-
 if [ ! $(which wget) ]; then
     sudo apt-get install wget -y
 fi
@@ -85,7 +42,6 @@ wget $DOWNLOAD_URL
 tar xvf $ARCHIVE
 rm $ARCHIVE
 sudo chmod +x ngrok
-clear
 echo "Running ngrok for ARCH $(uname -m) . . ."
 #./ngrok service install --config=ngrok.yml
 systemctl enable ngrok.service
@@ -93,7 +49,7 @@ systemctl start ngrok.service
 #./ngrok service start
 echo "Wait 10s…"
 sleep 10
-echo -e "Finish… to check status NGROK: \n http://127.0.01:4040"
+echo -e "Finish setup for ARCH $(uname -m) … to check status NGROK: \n http://127.0.01:4040"
 echo "First enter comand 'cd /opt/ngrok'"
 echo -e "To stop service NGROK:\n systemctl stop ngrok.service"
 echo -e "To setting configuration:\n sudo nano ngrok.yml"
