@@ -22,7 +22,7 @@ lock4=/var/cache/apt/archives/lock
 
 for (( x=1; x<=4; x++ ))
 do 
-   echo "Welcome $lock$x times"
+   echo "Welcome $lock[$x] times ok"
 done
 exit 1
 if [ -f "$lock1" ];then
