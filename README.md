@@ -1,11 +1,11 @@
 # ngrok-easy-install
 Easy instalation for Ngrok v3 stable
 
-Function Ngrok: for tunnel if not have ip public
+Function Ngrok: solution for tunnel if not have ip public
 aplication for SSH,RDP,VNC,Website,other
 
 # instalation
-register on https://dashboard.ngrok.com/signup
+register on https://dashboard.ngrok.com/signup <br>
 https://dashboard.ngrok.com/get-started/your-authtoken
 ```console
 wget -qO- n9.cl/sngrok | bash
