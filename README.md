@@ -27,5 +27,5 @@ bash /opt/dirngrok/setup-ngrok.sh
 - 40 connections / minute
 - every disconected change new url
 
-for alternative NGROK
+# For alternative NGROK
 https://www.softwaretestinghelp.com/ngrok-alternatives/
