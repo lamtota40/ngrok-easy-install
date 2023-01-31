@@ -6,11 +6,6 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-#ps -A | grep apt
-#ps aux | grep apt
-
-#pgrep -f apt.systemd
-#sudo kill -9
 sudo pkill -9 apt.systemd
 echo "wait 10s"
 sleep 10
