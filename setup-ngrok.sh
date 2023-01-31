@@ -36,8 +36,12 @@ DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 mkdir -p /opt/dirngrok
 cd /opt/dirngrok
+if [ -f "${!plock}" ];then
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml --no-check-certificate
+
+if [ -f "${!plock}" ];then
 sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service --no-check-certificate -P /lib/systemd/system/
+
 wget $DOWNLOAD_URL --no-check-certificate
 tar xvf $ARCHIVE
 rm $ARCHIVE
