@@ -20,7 +20,7 @@ lock2=/var/lib/dpkg/lock-frontend
 lock3=/var/lib/dpkg/lock
 lock4=/var/cache/apt/archives/lock
 
-for (( x=1; x<=5; x++ ))
+for (( x=1; x<=4; x++ ))
 do 
    echo "Welcome $lock$x times"
 done
