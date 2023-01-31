@@ -43,7 +43,8 @@ else
 fi
 
 if [ -f "/opt/dirngrok/ngrok.service" ];then
-    sudo /lib/systemd/system/
+    echo "Move file ngrok.service to '/lib/systemd/system/'"
+    sudo mv ngrok.service /lib/systemd/system/
 else
     sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service --no-check-certificate -P /lib/systemd/system/  
 fi
