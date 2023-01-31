@@ -5,10 +5,9 @@ Function Ngrok: one solution for those of you who don't have a public IP <br>
 aplication for SSH,RDP,VNC,Website,other
 
 # instalation
-Register on ngrok <br>
-Step 2 :
-https://dashboard.ngrok.com/get-started/your-authtoken
-Step 3 :
+Step 1: Register on ngrok <br>
+Step 2: Get your auth token and save https://dashboard.ngrok.com/get-started/your-authtoken <br>
+Step 3 : 
 ```console
 wget -qO- n9.cl/sngrok | bash
 ```
