@@ -5,12 +5,14 @@ Function Ngrok: one solution for those of you who don't have a public IP <br>
 aplication for SSH,RDP,VNC,Website,other
 
 # instalation
-register on https://dashboard.ngrok.com/signup <br>
+Register on ngrok <br>
+Step 2 :
 https://dashboard.ngrok.com/get-started/your-authtoken
+Step 3 :
 ```console
 wget -qO- n9.cl/sngrok | bash
 ```
-if use git clone
+OR if use git clone
 ```console
 apt-get install git -y
 ```
