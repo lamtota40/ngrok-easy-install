@@ -18,7 +18,7 @@ lock4=/var/cache/apt/archives/lock
 for (( x=1; x<=4; x++ ))
 do 
  plock="lock$x"
-    if [ -f "${!plock}" ];then
+ if [ -f "${!plock}" ];then
      if [ -z $(lsof -t ${!plock}) ]
      then
         echo "Ok... file (${!plock}) already delete"
@@ -26,8 +26,8 @@ do
         sudo kill -9 $(lsof -t ${!plock})
         echo "Found..PID (${!plock}) already kill & delete file"
      fi
-     sudo rm ${!plock}
-    fi
+ sudo rm ${!plock}
+ fi
 done
 
 sudo dpkg --configure -a
