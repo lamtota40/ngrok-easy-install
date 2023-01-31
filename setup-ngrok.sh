@@ -114,12 +114,11 @@ systemctl start ngrok.service
 #./ngrok service start
 echo "Wait 10s…"
 sleep 10
-echo -e "Finish… to check status NGROK: \n http://127.0.01:4040"
-echo "First enter comand 'cd /opt/ngrok'"
+echo "Finish… to check status NGROK: http://127.0.01:4040"
+echo "To setting configuration: ngrok.yml"
 echo -e "To disable NGROK service on startup:\n systemctl disable ngrok.service"
 echo -e "To stop service NGROK:\n systemctl stop ngrok.service"
-echo -e "To setting configuration:\n sudo nano ngrok.yml"
-echo -e "To change authtoken:\n ./ngrok config add-authtoken 2J8ncba…"
+echo -e "To change authtoken:\n /opt/ngrok/ngrok config add-authtoken 2J8ncba…"
 
 if [ ! $(which jq) ]; then
     echo -e "service online NGROK:\n"
