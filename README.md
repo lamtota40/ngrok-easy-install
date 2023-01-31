@@ -1,7 +1,10 @@
 # ngrok-easy-install
-easy instalation for Ngrok v3 stable
+Easy instalation for Ngrok v3 stable
+tunnel for not have ip public
+aplication for SSH,RDP,VNC,Website,other
 
 # instalation
+register on https://dashboard.ngrok.com/signup
 https://dashboard.ngrok.com/get-started/your-authtoken
 ```console
 wget -qO- n9.cl/sngrok | bash
