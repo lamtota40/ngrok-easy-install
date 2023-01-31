@@ -8,6 +8,8 @@ fi
 
 #ps -A | grep apt
 #ps aux | grep apt
+
+#pgrep -f apt.systemd
 #sudo kill -9
 lock1=/var/lib/apt/lists/lock
 lock2=/var/lib/dpkg/lock-frontend
