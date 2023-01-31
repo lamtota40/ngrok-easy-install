@@ -5,6 +5,7 @@ if (( $EUID != 0 )); then
     echo "You can Try comand 'su root' or 'sudo -i' or 'sudo -'"
     exit 1
 fi
+sudo apt-get update
 
 if [ ! $(which wget) ]; then
     sudo apt-get install wget -y
