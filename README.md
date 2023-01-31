@@ -1,7 +1,7 @@
 # ngrok-easy-install
 Easy instalation for Ngrok v3 stable
 
-Function Ngrok: solution for tunnel if not have ip public
+Function Ngrok: one solution for those of you who don't have a public IP <br>
 aplication for SSH,RDP,VNC,Website,other
 
 # instalation
