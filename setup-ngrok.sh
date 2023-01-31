@@ -17,53 +17,18 @@ lock4=/var/cache/apt/archives/lock
 
 for (( x=1; x<=4; x++ ))
 do 
-    plock="lock$x"
-    echo "${!plock}"
+ plock="lock$x"
+    if [ -f "${!plock}" ];then
+     if [ -z $(lsof -t ${!plock}) ]
+     then
+        echo "Ok... file (${!plock}) already delete"
+     else
+        sudo kill -9 $(lsof -t ${!plock})
+        echo "Found..PID (${!plock}) already kill & delete file"
+     fi
+     sudo rm ${!plock}
+    fi
 done
-exit 1
-if [ -f "$lock1" ];then
-if [ -z $(lsof -t $lock1) ]
-then
-      echo "Ok... file ($lock1) already delete"
-else
-      sudo kill -9 $(lsof -t $lock1)
-      echo "Found..PID ($lock1) already kill & delete file"
-fi
-sudo rm $lock1
-fi
-##############################
-if [ -f "$lock2" ];then
-if [ -z $(lsof -t $lock2) ]
-then
-      echo "Ok... file ($lock2) already delete"
-else
-      sudo kill -9 $(lsof -t $lock2)
-      echo "Found..PID ($lock2) already kill & delete file"
-fi
-sudo rm $lock2
-fi
-##############################
-if [ -f "$lock3" ];then
-if [ -z $(lsof -t $lock3) ]
-then
-      echo "Ok... file ($lock3) already delete"
-else
-      sudo kill -9 $(lsof -t $lock3)
-      echo "Found..PID ($lock3) already kill & delete file"
-fi
-sudo rm $lock3
-fi
-##############################
-if [ -f "$lock4" ];then
-if [ -z $(lsof -t $lock4) ]
-then
-      echo "Ok... file ($lock4) already delete"
-else
-      sudo kill -9 $(lsof -t $lock4)
-      echo "Found..PID ($lock4) already kill & delete file"
-fi
-sudo rm $lock4
-fi
 
 sudo dpkg --configure -a
 sudo apt-get install --reinstall libappstream4 -y
