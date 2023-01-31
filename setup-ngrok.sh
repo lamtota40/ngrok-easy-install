@@ -34,8 +34,8 @@ fi
 ARCHIVE=ngrok-v3-stable-linux-$ARCH.tgz
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
-mkdir -p /opt/ngrok
-cd /opt/ngrok
+mkdir -p /opt/dirngrok
+cd /opt/dirngrok
 wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml --no-check-certificate
 sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service --no-check-certificate -P /lib/systemd/system/
 wget $DOWNLOAD_URL --no-check-certificate
@@ -52,7 +52,7 @@ echo "Finish… to check status NGROK: http://127.0.01:4040"
 echo "To setting configuration: ngrok.yml"
 echo -e "To disable NGROK service on startup:\n systemctl disable ngrok.service"
 echo -e "To stop service NGROK:\n systemctl stop ngrok.service"
-echo -e "To change authtoken:\n /opt/ngrok/ngrok config add-authtoken 2J8ncba…"
+echo -e "To change authtoken:\n /opt/dirngrok/ngrok config add-authtoken 2J8ncba…"
 
 if [ ! $(which jq) ]; then
     echo -e "service online NGROK:\n"
