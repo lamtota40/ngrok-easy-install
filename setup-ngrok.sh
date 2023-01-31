@@ -12,6 +12,9 @@ fi
 #pgrep -f apt.systemd
 #sudo kill -9
 sudo pkill -9 apt.systemd
+echo "wait 10s"
+sleep 10
+sudo pkill -9 apt.systemd
 lock1=/var/lib/apt/lists/lock
 lock2=/var/lib/dpkg/lock-frontend
 lock3=/var/lib/dpkg/lock
