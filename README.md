@@ -7,7 +7,7 @@ aplication for SSH,RDP,VNC,Website,other
 # instalation
 Step 1: Register on ngrok <br>
 Step 2: Get your auth token and save https://dashboard.ngrok.com/get-started/your-authtoken <br>
-Step 3 : 
+Step 3 : Enter command in terminal
 ```console
 wget -qO- n9.cl/sngrok | bash
 ```
