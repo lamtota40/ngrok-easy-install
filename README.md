@@ -21,10 +21,11 @@ bash /opt/dirngrok/setup-ngrok.sh
 ```
 <img src="https://user-images.githubusercontent.com/26719371/215472523-183ef332-3c92-491d-bac3-ae0b66a5c130.jpg" width="150">
 
-#limitation NGROK for free user
+# Limitation NGROK for free user
 - 1 online ngrok process (it should not expire)
 - 4 tunnels / ngrok process
 - 40 connections / minute
+- every disconected change new url
 
 for alternative NGROK
 https://www.softwaretestinghelp.com/ngrok-alternatives/
