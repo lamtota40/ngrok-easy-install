@@ -36,16 +36,16 @@ DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 mkdir -p /opt/dirngrok
 cd /opt/dirngrok
-if [ -f "${!plock}" ];then
+if [ -f "/opt/dirngrok/ngrok.yml" ];then
     echo "OK…file 'ngrok.yml' Found"
 else
     wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.yml --no-check-certificate
 fi
 
-if [ -f "${!plock}" ];then
-sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service --no-check-certificate -P /lib/systemd/system/
+if [ -f "/opt/dirngrok/ngrok.service" ];then
+    sudo /lib/systemd/system/
 else
-/lib/systemd/system/
+    sudo wget https://raw.githubusercontent.com/lamtota40/ngrok-easy-install/main/ngrok.service --no-check-certificate -P /lib/systemd/system/  
 fi
 
 wget $DOWNLOAD_URL --no-check-certificate
@@ -53,7 +53,7 @@ tar xvf $ARCHIVE
 rm $ARCHIVE
 sudo chmod +x ngrok
 
-echo "Running ngrok for ARCH $(uname -m) . . ."
+echo "Running ngrok v3 stable for ARCH $(uname -m) . . ."
 systemctl enable ngrok.service
 systemctl start ngrok.service
 echo "Wait 10s…"
