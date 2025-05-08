@@ -1,5 +1,5 @@
 version: "2"
-authtoken: 2Q8CdwuBZiwu9WmL20mwUJrrZsu_7Fk7MP9EH1fHxGUuJ3N98
+authtoken: 1U15ntmCvYtW3whGlvEf59lzl8x_7gemJHvnJ6vdQSwweN3TL
 region: "us"
 tunnels:
   SSH:
